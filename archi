@@ -1,0 +1,36 @@
+src/
+│── api/                  # Gestion centralisée des requêtes API
+│   ├── authApi.js        # Appels API liés à l'authentification
+│   ├── gameApi.js        # Appels API liés au jeu (scores, stats, etc.)
+│
+│── components/           # Composants UI du jeu
+│   ├── Grid.jsx
+│   ├── Row.jsx
+│   ├── Tile.jsx
+│   ├── Keyboard.jsx
+│   ├── Message.jsx
+│   ├── Menu.jsx        # Ajout d'un Menu pour connexion/déconnexion
+│
+│── hooks/              # Hooks personnalisés
+│   ├── useGameLogic.js
+│
+│── context/              # Gestion du contexte global
+│   ├── AuthContext.js    # Contexte d'authentification
+│
+│── pages/                # Pages du site
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── Settings.jsx
+│   ├── Game.jsx          # Composant principal du jeu
+│
+│── styles/              # Styles
+│   ├── App.css
+│   ├── Menu.css
+│
+│── utils/              # Styles
+│   ├── dictionary.js
+│   ├── gameLogic.js
+│
+│── App.jsx               # Gestion des routes
+│── main.jsx              # Montage de l'application
+│── router.jsx            # Configuration centralisée des routes

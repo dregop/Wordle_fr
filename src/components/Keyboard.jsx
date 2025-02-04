@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Keyboard({ onKeyPress, onValidate, isValidateDisabled }) {
+function Keyboard({ onKeyPress, onValidate, isValidateDisabled, keyboardColors }) {
   const rows = [
     'AZERTYUIOP',
     'QSDFGHJKLM',
@@ -14,11 +14,11 @@ function Keyboard({ onKeyPress, onValidate, isValidateDisabled }) {
           {row.split('').map((letter) => (
             <button
               key={letter}
+              className={`key ${keyboardColors[letter] || ''}`} // Applique la couleur si elle existe
               onClick={(e) => {
                 onKeyPress(letter);
                 e.target.blur(); // Supprime le focus du bouton après le clic
               }}
-              className="keyboard-key"
             >
               {letter}
             </button>
